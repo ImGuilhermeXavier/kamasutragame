@@ -12,6 +12,7 @@
     "editor.colorDecorators": false,
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
+    "workbench.iconTheme": "origamid-next-icons",
     "prettier.singleQuote": true,
     "files.associations": {
         "*.js": "javascriptreact"

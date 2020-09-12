@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.button {
+  background: linear-gradient($secondary-color, $primary-color);
+  color: $white;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  border: solid 2px $background-color;
+  box-shadow: 0 2px 4px 0 black;
+}
+
+.button:focus,
+.button:hover {
+  box-shadow: none;
+  border: solid 2px $green;
+  outline: none;
+}

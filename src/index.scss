@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+@font-face {
+  font-family: 'Myanmar', Helvetica, sans-serif;
+  src: url('./Static/Fonts/myanmar-sangam-mn.ttf') format('truetype'),
+}
+
+body {
+  background-color: $background-color;
+  color: $white;
+  font-family: 'Myanmar';
+}
