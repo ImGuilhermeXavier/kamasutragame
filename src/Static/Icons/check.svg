@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="78px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>check_circle-24px</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#950740" offset="0%"></stop>
+            <stop stop-color="#6F2232" offset="100%"></stop>
+        </linearGradient>
+        <path d="M34,0 C15.232,0 0,15.232 0,34 C0,52.768 15.232,68 34,68 C52.768,68 68,52.768 68,34 C68,15.232 52.768,0 34,0 Z M27.2,51 L10.2,34 L14.994,29.206 L27.2,41.378 L53.006,15.572 L57.8,20.4 L27.2,51 Z" id="path-2"></path>
+        <filter x="-11.0%" y="-8.1%" width="122.1%" height="122.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Step-Four" transform="translate(-159.000000, -501.000000)" fill-rule="nonzero">
+            <g id="Shape" transform="translate(164.000000, 504.000000)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use stroke="#1A1A1D" stroke-width="1" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
