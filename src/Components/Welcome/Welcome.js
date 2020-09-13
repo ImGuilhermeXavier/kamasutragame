@@ -9,7 +9,9 @@ function Welcome() {
         <>
             <div className={styles.App}>
                 <img className={styles.logo} src={logo} alt='Kama Sutra Logo' />
-                <Button>Começar</Button>
+                <Button link='true' to='tour'>
+                    Começar
+                </Button>
             </div>
             <footer className={styles.footer}>
                 Alguns direitos reservados.

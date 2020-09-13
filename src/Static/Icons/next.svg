@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="37px" viewBox="0 0 22 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <defs>
+        <path d="M207.511274,524.21234 L193.876642,509.527191 C193.56129,509.187267 193.140322,509 192.691455,509 C192.242589,509 191.821621,509.187267 191.506268,509.527191 L190.502173,510.608402 C189.8488,511.312932 189.8488,512.457996 190.502173,513.161454 L201.951507,525.493159 L190.489469,537.838546 C190.174116,538.17847 190,538.631613 190,539.114804 C190,539.598532 190.174116,540.051674 190.489469,540.391867 L191.493565,541.472809 C191.809166,541.812733 192.229885,542 192.678752,542 C193.127618,542 193.548586,541.812733 193.863939,541.472809 L207.511274,526.774246 C207.827374,526.433249 208.000992,525.97796 208,525.493963 C208.000992,525.008089 207.827374,524.553069 207.511274,524.21234 Z" id="path-1"></path>
+        <filter x="-19.4%" y="-10.6%" width="138.9%" height="121.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Step-One" transform="translate(-188.000000, -507.000000)" fill-rule="nonzero">
+            <g id="Path">
+                <use fill="#1A1A1D" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#1A1A1D" stroke-width="3" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
