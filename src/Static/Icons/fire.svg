@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="206" height="206" xmlns:xlink="http://www.w3.org/1999/xlink"><title>local_fire_department-24px</title><defs><path id="b" d="M167.58 106.16c-13.45-35.02-61.32-36.9-49.76-87.8.85-3.78-3.17-6.7-6.42-4.72C80.3 32 57.95 68.84 76.7 117.06c1.55 3.95-3.07 7.64-6.4 5.07-15.52-11.76-17.14-28.67-15.77-40.77.5-4.47-5.3-6.6-7.8-2.92C40.9 87.37 35 101.8 35 123.5c3.25 48.07 43.76 62.83 58.32 64.72 20.82 2.66 43.34-1.2 59.53-16.05 17.8-16.57 24.32-43 14.73-66zM88.1 149.34c12.33-3 18.67-11.93 20.38-19.83 2.83-12.26-8.22-24.28-.77-43.68 2.84 16.05 28.02 26.1 28.02 43.6.68 21.72-22.78 40.35-47.62 19.92z"/><filter id="a" width="113.9%" height="110.8%" x="-6.9%" y="-4.3%" filterUnits="objectBoundingBox"><feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/><feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowBlurOuter1"/></filter><filter id="c" width="112.4%" height="109.7%" x="-6.2%" y="-3.7%" filterUnits="objectBoundingBox"><feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"/><feOffset dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"/><feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" in="shadowInnerInner1"/></filter></defs><g fill="none"><g><g><path id="Rectangle" fill="#4E4E50" stroke="#979797" d="M84.5 78.5h57v93h-57z"/><path d="M0 0h206v206H0z"/><g fill-rule="nonzero" transform="translate(-94 -206) translate(94 206)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#6F2232" xlink:href="#b"/><use fill="#000" filter="url(#c)" xlink:href="#b"/><use stroke="#1A1A1D" stroke-width="5" xlink:href="#b"/></g></g></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="206px" viewBox="0 0 206 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>local_fire_department-24px</title>
+    <defs>
+        <path d="M167.578087,106.163797 C154.13186,71.143836 106.25644,69.2555048 117.818482,18.3563946 C118.67493,14.5797321 114.649626,11.661402 111.395125,13.6355665 C80.3060776,32.0038794 57.9527954,68.8263386 76.7089977,117.064618 C78.2506034,121.012947 73.6257864,124.703777 70.2856408,122.128779 C54.7839394,110.369626 53.1566889,93.4604779 54.5270051,81.3579913 C55.0408736,76.8946629 49.21703,74.748832 46.733332,78.4396612 C40.9094884,87.366318 35,101.786302 35,123.502111 C38.2545008,171.568725 78.7644719,186.332041 93.324081,188.220373 C114.135757,190.881203 136.660329,187.018707 152.847189,172.169557 C170.661298,155.603742 177.1703,129.167105 167.578087,106.163797 Z M88.0997507,149.337916 C100.432596,146.333753 106.770308,137.407096 108.483203,129.510438 C111.30948,117.236285 100.261306,105.219631 107.7124,85.8213197 C110.538678,101.872135 135.718237,111.914624 135.718237,129.424605 C136.403395,151.140414 112.936731,169.766227 88.0997507,149.337916 Z" id="path-1"></path>
+        <filter x="-6.9%" y="-4.3%" width="113.9%" height="110.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-6.2%" y="-3.7%" width="112.4%" height="109.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Step-Four" transform="translate(-94.000000, -206.000000)">
+            <g id="local_fire_department-24px" transform="translate(94.000000, 206.000000)">
+                <rect id="Rectangle" stroke="#979797" fill="#4E4E50" x="84.5" y="78.5" width="57" height="93"></rect>
+                <rect id="Rectangle" x="0" y="0" width="206" height="206"></rect>
+                <g id="Shape" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#6F2232" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                    <use stroke="#1A1A1D" stroke-width="5" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
