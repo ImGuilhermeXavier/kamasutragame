@@ -4,7 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 1.5rem;
+  padding: 2rem 1.5rem;
+}
+
+.headerComplete {
+  background-color: $primary-color;
+  border: solid 2px $background-color;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 2px 4px 0 $black;
 }
 
 .prevBtn {
@@ -14,7 +22,7 @@
   width: 1rem;
   margin: auto;
   border-radius: 50%;
-  border: solid 2px $background-color;
+  border-bottom: solid 2px $background-color;
   box-shadow: 0 2px 4px 0 $black;
   text-decoration: none;
   display: flex;
@@ -28,3 +36,29 @@
     width: 100%;
   }
 }
+
+.headerPages {
+  display: flex;
+  align-items: self-end;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.img {
+  height: 8rem;
+  width: 8rem;
+}
+
+.title {
+  color: $background-color;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: $background-color;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+@media (min-width: $screen-sm) {}

@@ -16,27 +16,33 @@ const Home = () => {
             </div>
             <nav className={styles.nav}>
                 <Link to='/positions' className={styles.button}>
-                    <img
-                        src={positions}
-                        alt='Posições'
-                        className={styles.icon}
-                    />
+                    <div className={styles.img}>
+                        <img
+                            src={positions}
+                            alt='Posições'
+                            className={styles.icon}
+                        />
+                    </div>
                     {/* <span className={styles.name}>Posições</span> */}
                 </Link>
                 <Link to='/game' className={styles.button}>
-                    <img
-                        src={joystick}
-                        alt='Joystick'
-                        className={styles.icon}
-                    />
+                    <div className={styles.img}>
+                        <img
+                            src={joystick}
+                            alt='Joystick'
+                            className={styles.icon}
+                        />
+                    </div>
                     {/* <span className={styles.name}>Jogar</span> */}
                 </Link>
                 <Link to='/statistics' className={styles.button}>
-                    <img
-                        src={statistic}
-                        alt='Statistics'
-                        className={styles.icon}
-                    />
+                    <div className={styles.img}>
+                        <img
+                            src={statistic}
+                            alt='Statistics'
+                            className={styles.icon}
+                        />
+                    </div>
                     {/* <span className={styles.name}>Estatísticas</span> */}
                 </Link>
             </nav>

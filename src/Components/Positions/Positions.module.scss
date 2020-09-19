@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstColumn {
+  margin-left: -2rem;
+}
+
+.card {
+  border: solid 6px $primary-color;
+  box-shadow: 2px 2px 4px 0 $black;
+  border-radius: 1rem;
+  margin: 5rem -2rem 0 0;
+  width: 10rem;
+  height: 10rem;
+  transform: rotate(45deg);
+}
+
+.img {
+  width: 100%;
+}
