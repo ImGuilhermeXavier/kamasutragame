@@ -47,7 +47,7 @@ const TourStep = ({ number }) => {
                 <h1 className={styles.title}>{step.title}</h1>
                 <h3 className={styles.subtitle}>{step.subtitle}</h3>
             </header>
-            <img className={styles.image} src={step.image} alt='cards' />
+            <img className={`${styles.image}`} src={step.image} alt='cards' />
             <div>
                 {number !== 4 ? (
                     <Link className={styles.nextBtn} to={setStepActive(number)}>

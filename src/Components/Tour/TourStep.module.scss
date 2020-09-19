@@ -43,6 +43,15 @@
   }
 }
 
+.nextBtn:hover,
+.nextBtn:focus,
+.finish:hover,
+.finish:focus {
+  box-shadow: none;
+  border: solid 2px $green;
+  outline: none;
+}
+
 .finish {
   height: 4.5rem;
   width: 4.5rem;

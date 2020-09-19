@@ -6,12 +6,23 @@ import smallLogo from '../Static/Logos/ks-logo-sm.png';
 
 import styles from './Header.module.scss';
 
-const Header = ({ hidePrev, complete, title, subtitle = '', image }) => {
+const Header = ({
+    hidePrev,
+    linkPrev = '/home',
+    complete,
+    title,
+    subtitle = '',
+    image,
+}) => {
     return (
-        <header className={`${complete && styles.headerComplete}`}>
+        <header
+            className={`${
+                complete ? styles.headerComplete : styles.headerSimple
+            }`}
+        >
             <div className={styles.header}>
                 {!hidePrev && (
-                    <Link className={styles.prevBtn} to='/home'>
+                    <Link className={styles.prevBtn} to={linkPrev}>
                         <PrevIcon />
                     </Link>
                 )}

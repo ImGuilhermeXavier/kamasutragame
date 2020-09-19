@@ -5,46 +5,74 @@ import styles from './Positions.module.scss';
 import steps from '../../positions';
 
 import positions from '../../Static/Icons/positions.svg';
+import { Link, useParams } from 'react-router-dom';
+
+function scrollToElement(id) {
+    window.scrollTo(
+        0,
+        document.getElementById(`step-${id}`).getBoundingClientRect().top -
+            window.innerHeight / 2 +
+            document.getElementById(`step-${id}`).offsetHeight,
+    );
+}
 
 const Positions = () => {
-    console.log(steps);
+    const { id } = useParams();
+
+    React.useEffect(() => {
+        if (id) {
+            scrollToElement(id);
+        }
+    }, [id]);
+
     return (
         <section className='animeLeft'>
             <Header
                 complete='true'
                 title='Positions'
+                linkPrev='/home'
                 image={positions}
                 subtitle='Total: 54 posições'
             />
             <div className={styles.content}>
-                <div className={styles.firstColumn}>
+                <ul className={styles.firstColumn}>
                     {steps.map(
                         (step) =>
                             steps.indexOf(step) <= steps.length / 2 && (
-                                <div key={step.image} className={styles.card}>
-                                    {/* <img
-                            className={styles.img}
-                            src={step.image}
-                            alt={step.title}
-                        /> */}
-                                </div>
+                                <Link
+                                    to={`/position/${step.id}`}
+                                    key={step.id}
+                                    id={`step-${step.id}`}
+                                    className={styles.card}
+                                >
+                                    <img
+                                        className={styles.img}
+                                        src={step.image}
+                                        alt={step.title}
+                                    />
+                                </Link>
                             ),
                     )}
-                </div>
-                <div className={styles.secondColumn}>
+                </ul>
+                <ul className={styles.secondColumn}>
                     {steps.map(
                         (step) =>
                             steps.indexOf(step) > steps.length / 2 && (
-                                <div key={step.image} className={styles.card}>
-                                    {/* <img
-                            className={styles.img}
-                            src={step.image}
-                            alt={step.title}
-                        /> */}
-                                </div>
+                                <Link
+                                    to={`/position/${step.id}`}
+                                    key={step.id}
+                                    id={`step-${step.id}`}
+                                    className={styles.card}
+                                >
+                                    <img
+                                        className={styles.img}
+                                        src={step.image}
+                                        alt={step.title}
+                                    />
+                                </Link>
                             ),
                     )}
-                </div>
+                </ul>
             </div>
         </section>
     );
