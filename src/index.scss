@@ -1,12 +1,12 @@
 @import './variables.scss';
 
 @font-face {
-  font-family: 'source sans pro';
-  src: url('./Static/Fonts/SourceSansPro-Regular.ttf') format('truetype'),
+  font-family: 'IBM Plex Mono';
+  src: url('./Static/Fonts/IBMPlexMono-Regular.ttf') format('truetype'),
 }
 
 body {
   background-color: $background-color;
   color: $white;
-  font-family: "source sans pro", Arial, Helvetica, sans-serif;
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
 }

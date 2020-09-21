@@ -44,9 +44,7 @@
 }
 
 .nextBtn:hover,
-.nextBtn:focus,
-.finish:hover,
-.finish:focus {
+.nextBtn:focus {
   box-shadow: none;
   border: solid 2px $green;
   outline: none;

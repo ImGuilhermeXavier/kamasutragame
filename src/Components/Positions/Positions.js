@@ -8,12 +8,14 @@ import positions from '../../Static/Icons/positions.svg';
 import { Link, useParams } from 'react-router-dom';
 
 function scrollToElement(id) {
+    const card = document.getElementById(`step-${id}`);
     window.scrollTo(
         0,
-        document.getElementById(`step-${id}`).getBoundingClientRect().top -
+        card.getBoundingClientRect().top -
             window.innerHeight / 2 +
-            document.getElementById(`step-${id}`).offsetHeight,
+            card.offsetHeight,
     );
+    card.focus();
 }
 
 const Positions = () => {
@@ -32,7 +34,7 @@ const Positions = () => {
                 title='Positions'
                 linkPrev='/home'
                 image={positions}
-                subtitle='Total: 54 posições'
+                subtitle={`Total: ${steps.length} posições`}
             />
             <div className={styles.content}>
                 <ul className={styles.firstColumn}>

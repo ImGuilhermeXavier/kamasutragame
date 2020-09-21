@@ -23,7 +23,7 @@ const Home = () => {
                             className={styles.icon}
                         />
                     </div>
-                    {/* <span className={styles.name}>Posições</span> */}
+                    <span className={styles.name}>Posições</span>
                 </Link>
                 <Link to='/game' className={styles.button}>
                     <div className={styles.img}>
@@ -33,7 +33,7 @@ const Home = () => {
                             className={styles.icon}
                         />
                     </div>
-                    {/* <span className={styles.name}>Jogar</span> */}
+                    <span className={styles.name}>Jogar</span>
                 </Link>
                 <Link to='/statistics' className={styles.button}>
                     <div className={styles.img}>
@@ -43,7 +43,7 @@ const Home = () => {
                             className={styles.icon}
                         />
                     </div>
-                    {/* <span className={styles.name}>Estatísticas</span> */}
+                    <span className={styles.name}>Estatísticas</span>
                 </Link>
             </nav>
         </section>

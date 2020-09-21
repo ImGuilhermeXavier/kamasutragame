@@ -12,8 +12,8 @@ const Position = () => {
     return (
         <section className={styles.position}>
             <Header linkPrev={`/positions/${id}`} />
-            <div>
-                <img src={step.image} alt={step.title} />
+            <div className={styles.imgContent}>
+                <img className={styles.img} src={step.image} alt={step.title} />
             </div>
             <div className={styles.card}>
                 <h1 className={styles.title}>{step.title}</h1>

@@ -36,9 +36,6 @@ const Header = ({
                         <h1 className={styles.title}>{title}</h1>
                         <h2 className={styles.subtitle}>{subtitle}</h2>
                     </div>
-                    <div className={styles.img}>
-                        <img src={image} alt='position example' />
-                    </div>
                 </div>
             )}
         </header>

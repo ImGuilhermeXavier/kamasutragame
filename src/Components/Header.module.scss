@@ -11,14 +11,6 @@
   width: 100%;
 }
 
-.headerComplete {
-  background-color: $primary-color;
-  border: solid 2px $background-color;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  box-shadow: 0 2px 4px 0 $black;
-}
-
 .prevBtn {
   background: linear-gradient($secondary-color, $primary-color);
   padding: 1rem;
@@ -50,16 +42,21 @@
 .img {
   height: 8rem;
   width: 8rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .title {
-  color: $background-color;
+  color: $white;
   margin-top: 0.5rem;
   font-size: 2rem;
 }
 
 .subtitle {
-  color: $background-color;
+  color: $green;
   margin-top: 0.5rem;
   font-size: 1rem;
 }
