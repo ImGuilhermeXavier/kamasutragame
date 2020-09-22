@@ -30,7 +30,7 @@ const Home = () => {
                         <img
                             src={joystick}
                             alt='Joystick'
-                            className={styles.icon}
+                            className={styles.iconGame}
                         />
                     </div>
                     <span className={styles.name}>Jogar</span>
@@ -40,7 +40,7 @@ const Home = () => {
                         <img
                             src={statistic}
                             alt='Statistics'
-                            className={styles.icon}
+                            className={styles.iconEst}
                         />
                     </div>
                     <span className={styles.name}>Estatísticas</span>

@@ -34,7 +34,7 @@
 
 .headerPages {
   display: flex;
-  align-items: self-end;
+  align-items: baseline;
   justify-content: space-between;
   padding: 0 1.5rem;
 }
@@ -51,12 +51,10 @@
 
 .title {
   color: $white;
-  margin-top: 0.5rem;
   font-size: 2rem;
 }
 
 .subtitle {
   color: $green;
-  margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }

@@ -31,10 +31,10 @@ const Positions = () => {
         <section className='animeLeft'>
             <Header
                 complete='true'
-                title='Positions'
+                title='Posições'
                 linkPrev='/home'
                 image={positions}
-                subtitle={`Total: ${steps.length} posições`}
+                subtitle={`Total: ${steps.length}`}
             />
             <div className={styles.content}>
                 <ul className={styles.firstColumn}>

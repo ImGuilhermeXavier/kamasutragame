@@ -32,10 +32,8 @@ const Header = ({
             </div>
             {complete && (
                 <div className={styles.headerPages}>
-                    <div className={styles.titles}>
-                        <h1 className={styles.title}>{title}</h1>
-                        <h2 className={styles.subtitle}>{subtitle}</h2>
-                    </div>
+                    <h1 className={styles.title}>{title}</h1>
+                    <h2 className={styles.subtitle}>{subtitle}</h2>
                 </div>
             )}
         </header>
