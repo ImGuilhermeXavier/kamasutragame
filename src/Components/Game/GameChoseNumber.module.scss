@@ -1,0 +1,67 @@
+@import '../../variables.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.number {
+  font-size: 4rem;
+  color: $green;
+}
+
+.buttons {
+  margin-bottom: 4rem;
+  display: flex;
+  height: 4rem;
+}
+
+.button {
+  background: linear-gradient($secondary-color, $primary-color);
+  border: solid 2px $background-color;
+  box-shadow: 0 2px 4px 0 black;
+}
+
+.button:hover {
+  box-shadow: none;
+  border: solid 2px $green;
+  outline: none;
+}
+
+.buttonCount {
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonStart {
+  width: 150px;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  color: $white;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.iconMinus {
+  width: 50%;
+  border: solid 3px $background-color;
+}
+
+.iconPlus {
+  font-size: 4rem;
+  font-weight: bold;
+  color: $background-color;
+}
