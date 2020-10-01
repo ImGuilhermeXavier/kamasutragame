@@ -14,11 +14,7 @@ const Header = ({
     subtitle = '',
 }) => {
     return (
-        <header
-            className={`${
-                complete ? styles.headerComplete : styles.headerSimple
-            }`}
-        >
+        <header className={`${complete ? '' : styles.headerSimple}`}>
             <div
                 className={`${styles.header}  ${
                     hidePrev && styles.headerCenter

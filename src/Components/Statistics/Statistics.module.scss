@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+
+.statistics {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  border: solid 5px $primary-color;
+  box-shadow: 2px 2px 4px 0 $black;
+  margin: 0 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+}
