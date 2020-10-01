@@ -10,7 +10,7 @@ const GameFinish = () => {
     const navigate = useNavigate();
 
     return (
-        <section className={styles.finish}>
+        <section className={`animeLeft ${styles.finish}`}>
             <Header hidePrev='true' />
             <Cock />
             <div className={styles.congratulation}>
