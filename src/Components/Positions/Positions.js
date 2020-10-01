@@ -50,6 +50,7 @@ const Positions = () => {
                                     <img
                                         className={styles.img}
                                         src={step.image}
+                                        loading='lazy'
                                         alt={step.title}
                                     />
                                 </Link>
@@ -69,6 +70,7 @@ const Positions = () => {
                                     <img
                                         className={styles.img}
                                         src={step.image}
+                                        loading='lazy'
                                         alt={step.title}
                                     />
                                 </Link>

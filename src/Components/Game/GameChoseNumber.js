@@ -4,12 +4,14 @@ import Header from '../Header';
 import cardsImage from '../../Static/Icons/cards.svg';
 
 import styles from './GameChoseNumber.module.scss';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../UserContext';
 
 const GameChoseNumber = () => {
     const [cardNumber, setCardNumber] = React.useState(4);
+    const { startGame } = React.useContext(UserContext);
+    const navigate = useNavigate();
     let arrayTotal;
-    let nextStep;
 
     function changeCardNumber(plus) {
         if (plus) {
@@ -24,7 +26,7 @@ const GameChoseNumber = () => {
             arrayTotal = arr;
             return;
         }
-        let newNumber = Math.floor(Math.random() * 50 + 1);
+        const newNumber = Math.floor(Math.random() * 38 + 1);
         if (arr.indexOf(newNumber) < 0) {
             arr.push(newNumber);
         }
@@ -33,14 +35,12 @@ const GameChoseNumber = () => {
 
     function saveCardNumber() {
         numberGenerator([], cardNumber);
-        console.log(arrayTotal);
-        nextStep = arrayTotal.shift();
-        localStorage.setItem('cards', JSON.stringify(arrayTotal));
-        return <Link to={`/game/${nextStep}`} />;
+        startGame(arrayTotal);
+        return navigate('cards');
     }
 
     return (
-        <div className={`${styles.content} animeLeft`}>
+        <section className={`${styles.content} animeLeft`}>
             <Header />
             <h1 className={styles.title}>Quantas posições?</h1>
             <div>
@@ -71,7 +71,7 @@ const GameChoseNumber = () => {
                     <span className={styles.iconPlus}>+</span>
                 </button>
             </div>
-        </div>
+        </section>
     );
 };
 

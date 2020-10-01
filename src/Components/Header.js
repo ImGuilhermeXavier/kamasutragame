@@ -12,7 +12,6 @@ const Header = ({
     complete,
     title,
     subtitle = '',
-    image,
 }) => {
     return (
         <header
@@ -20,7 +19,11 @@ const Header = ({
                 complete ? styles.headerComplete : styles.headerSimple
             }`}
         >
-            <div className={styles.header}>
+            <div
+                className={`${styles.header}  ${
+                    hidePrev && styles.headerCenter
+                }`}
+            >
                 {!hidePrev && (
                     <Link className={styles.prevBtn} to={linkPrev}>
                         <PrevIcon />

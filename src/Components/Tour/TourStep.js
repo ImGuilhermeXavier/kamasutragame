@@ -38,7 +38,12 @@ const TourStep = ({ number }) => {
     }
 
     function setStepActive(step) {
-        return step !== 4 ? `/tour/step-${step + 1}` : '/home';
+        return `/tour/step-${step + 1}`;
+    }
+
+    function finish(step) {
+        localStorage.setItem('finishOnboarding', true);
+        return '/home';
     }
 
     return (
@@ -54,7 +59,7 @@ const TourStep = ({ number }) => {
                         <NextIcon />
                     </Link>
                 ) : (
-                    <Link className={styles.finish} to={setStepActive(number)}>
+                    <Link className={styles.finish} to={finish(number)}>
                         <Check />
                     </Link>
                 )}

@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+
+.finish {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.congratulation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.title {
+  color: $green;
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  margin-bottom: 5rem;
+}
+
+.button {
+  background: linear-gradient($secondary-color, $primary-color);
+  color: $white;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  border: solid 2px $background-color;
+  box-shadow: 0 2px 4px 0 black;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.button:focus,
+.button:hover {
+  box-shadow: none;
+  border: solid 2px $green;
+  outline: none;
+}
