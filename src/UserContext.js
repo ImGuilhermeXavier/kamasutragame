@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
 
 export const UserStorage = ({ children }) => {
+    const navigate = useNavigate();
     const [cards, setCards] = React.useState([]);
     // const [donePositions, setDonePositions] = React.useState([]);
 
@@ -11,7 +13,10 @@ export const UserStorage = ({ children }) => {
             return { number: card, status: '' };
         });
         setCards(cardsArrayAndStatus);
-        localStorage.setItem('currentGame', JSON.stringify(cards));
+        localStorage.setItem(
+            'currentGame',
+            JSON.stringify(cardsArrayAndStatus),
+        );
     }
 
     function positionDone(id, status) {
@@ -28,8 +33,13 @@ export const UserStorage = ({ children }) => {
         const storedCurrentGame = JSON.parse(
             localStorage.getItem('currentGame'),
         );
+
+        if (!storedCurrentGame.filter((position) => !position.status).length) {
+            navigate('/home');
+        }
+
         setCards(storedCurrentGame);
-    }, []);
+    }, [navigate]);
 
     return (
         <UserContext.Provider value={{ startGame, cards, positionDone }}>

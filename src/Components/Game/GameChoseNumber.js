@@ -7,6 +7,9 @@ import styles from './GameChoseNumber.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 
+import { ReactComponent as Add } from '../../Static/Icons/add.svg';
+import { ReactComponent as Remove } from '../../Static/Icons/remove.svg';
+
 const GameChoseNumber = () => {
     const [cardNumber, setCardNumber] = React.useState(4);
     const { startGame } = React.useContext(UserContext);
@@ -54,7 +57,7 @@ const GameChoseNumber = () => {
                     }}
                     className={`${styles.button} ${styles.buttonCount}`}
                 >
-                    <span className={styles.iconMinus}></span>
+                    <Remove />
                 </button>
                 <button
                     onClick={saveCardNumber}
@@ -68,7 +71,7 @@ const GameChoseNumber = () => {
                     }}
                     className={`${styles.button} ${styles.buttonCount}`}
                 >
-                    <span className={styles.iconPlus}>+</span>
+                    <Add />
                 </button>
             </div>
         </section>

@@ -59,9 +59,11 @@
   justify-content: center;
   align-items: center;
   border: solid 2px $background-color;
+  background: linear-gradient($secondary-color, $primary-color);
   box-shadow: 0 2px 4px 0 $black;
 
   svg {
+    fill: $background-color;
     height: 100%;
     width: 100%;
   }

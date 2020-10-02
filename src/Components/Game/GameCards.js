@@ -5,7 +5,7 @@ import Header from '../Header';
 
 import styles from './GameCards.module.scss';
 
-import { ReactComponent as Done } from '../../Static/Icons/done.svg';
+import { ReactComponent as Check } from '../../Static/Icons/check.svg';
 import { ReactComponent as Decline } from '../../Static/Icons/decline.svg';
 import { useNavigate } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ const GameCards = () => {
                             onClick={() => finishPosition(current.id, 'done')}
                             className={styles.button}
                         >
-                            <Done />
+                            <Check />
                         </button>
                     </div>
                 </>
