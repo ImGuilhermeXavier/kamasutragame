@@ -6,7 +6,7 @@ import Header from '../Header';
 import styles from './GameCards.module.scss';
 
 import { ReactComponent as Check } from '../../Static/Icons/check.svg';
-import { ReactComponent as Decline } from '../../Static/Icons/decline.svg';
+import { ReactComponent as Refresh } from '../../Static/Icons/refresh.svg';
 import { useNavigate } from 'react-router-dom';
 
 const GameCards = () => {
@@ -30,7 +30,7 @@ const GameCards = () => {
 
     return (
         <div className={styles.gameCards}>
-            <Header />
+            <Header hidePrev='true' />
             {cards && current && (
                 <>
                     <img src={current.image} alt={current.title} />
@@ -45,7 +45,7 @@ const GameCards = () => {
                             }
                             className={styles.button}
                         >
-                            <Decline />
+                            <Refresh />
                         </button>
                         <button
                             onClick={() => finishPosition(current.id, 'done')}
