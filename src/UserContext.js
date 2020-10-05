@@ -6,10 +6,10 @@ export const UserContext = React.createContext();
 export const UserStorage = ({ children }) => {
     const navigate = useNavigate();
     const [cards, setCards] = React.useState([]);
-    // const [donePositions, setDonePositions] = React.useState([]);
 
-    function startGame(cardsArray) {
-        const cardsArrayAndStatus = cardsArray.map((card) => {
+    function startGame(cardNumber) {
+        const cardArray = numberGenerator(cardNumber);
+        const cardsArrayAndStatus = cardArray.map((card) => {
             return { number: card, status: '' };
         });
         setCards(cardsArrayAndStatus);
@@ -29,12 +29,42 @@ export const UserStorage = ({ children }) => {
         localStorage.setItem('currentGame', JSON.stringify(cards));
     }
 
+    function positionRefreshed(id) {
+        const newCard = numberGenerator(1)[0];
+        if (cards.filter((card) => card.number === newCard).length) {
+            console.log(newCard);
+            return positionRefreshed(id);
+        }
+        const newCardsArray = cards.map((card) => {
+            if (card.number === id) {
+                card.number = newCard;
+                return card;
+            }
+            return card;
+        });
+        setCards(newCardsArray);
+    }
+
+    function numberGenerator(cardNumber, arr = []) {
+        if (arr.length >= cardNumber) {
+            return arr;
+        }
+        const newNumber = Math.floor(Math.random() * 38 + 1);
+        if (arr.indexOf(newNumber) < 0) {
+            arr.push(newNumber);
+        }
+        return numberGenerator(cardNumber, arr);
+    }
+
     React.useEffect(() => {
         const storedCurrentGame = JSON.parse(
             localStorage.getItem('currentGame'),
         );
 
-        if (!storedCurrentGame.filter((position) => !position.status).length) {
+        if (
+            storedCurrentGame &&
+            !storedCurrentGame.filter((position) => !position.status).length
+        ) {
             navigate('/home');
         }
 
@@ -42,7 +72,9 @@ export const UserStorage = ({ children }) => {
     }, [navigate]);
 
     return (
-        <UserContext.Provider value={{ startGame, cards, positionDone }}>
+        <UserContext.Provider
+            value={{ startGame, cards, positionDone, positionRefreshed }}
+        >
             {children}
         </UserContext.Provider>
     );

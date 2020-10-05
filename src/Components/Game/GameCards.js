@@ -10,7 +10,9 @@ import { ReactComponent as Refresh } from '../../Static/Icons/refresh.svg';
 import { useNavigate } from 'react-router-dom';
 
 const GameCards = () => {
-    const { cards, positionDone } = React.useContext(UserContext);
+    const { cards, positionDone, positionRefreshed } = React.useContext(
+        UserContext,
+    );
     const [current, setCurrent] = React.useState({});
     const navigate = useNavigate();
 
@@ -28,6 +30,10 @@ const GameCards = () => {
         }
     }
 
+    function refreshPosition(id) {
+        positionRefreshed(id);
+    }
+
     return (
         <div className={styles.gameCards}>
             <Header hidePrev='true' />
@@ -40,9 +46,7 @@ const GameCards = () => {
                     </div>
                     <div className={styles.buttons}>
                         <button
-                            onClick={() =>
-                                finishPosition(current.id, 'decline')
-                            }
+                            onClick={() => refreshPosition(current.id)}
                             className={styles.button}
                         >
                             <Refresh />

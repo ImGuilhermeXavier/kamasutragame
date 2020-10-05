@@ -14,31 +14,17 @@ const GameChoseNumber = () => {
     const [cardNumber, setCardNumber] = React.useState(4);
     const { startGame } = React.useContext(UserContext);
     const navigate = useNavigate();
-    let arrayTotal;
 
-    function changeCardNumber(plus) {
-        if (plus) {
-            setCardNumber(cardNumber + 1);
-        } else if (cardNumber > 0) {
-            setCardNumber(cardNumber - 1);
-        }
+    function addCardNumber() {
+        if (cardNumber < 36) setCardNumber(cardNumber + 1);
     }
 
-    function numberGenerator(arr, cardNumber) {
-        if (arr.length >= cardNumber) {
-            arrayTotal = arr;
-            return;
-        }
-        const newNumber = Math.floor(Math.random() * 38 + 1);
-        if (arr.indexOf(newNumber) < 0) {
-            arr.push(newNumber);
-        }
-        numberGenerator(arr, cardNumber);
+    function removeCardNumber() {
+        setCardNumber(cardNumber - 1);
     }
 
     function saveCardNumber() {
-        numberGenerator([], cardNumber);
-        startGame(arrayTotal);
+        startGame(cardNumber);
         return navigate('cards');
     }
 
@@ -52,9 +38,7 @@ const GameChoseNumber = () => {
             <div className={styles.number}>{cardNumber}</div>
             <div className={styles.buttons}>
                 <button
-                    onClick={() => {
-                        changeCardNumber(false);
-                    }}
+                    onClick={removeCardNumber}
                     className={`${styles.button} ${styles.buttonCount}`}
                 >
                     <Remove />
@@ -66,9 +50,7 @@ const GameChoseNumber = () => {
                     Começar
                 </button>
                 <button
-                    onClick={() => {
-                        changeCardNumber(true);
-                    }}
+                    onClick={addCardNumber}
                     className={`${styles.button} ${styles.buttonCount}`}
                 >
                     <Add />
