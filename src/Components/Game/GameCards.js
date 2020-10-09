@@ -3,7 +3,10 @@ import { UserContext } from '../../UserContext';
 import steps from '../../positions';
 import Header from '../Header';
 
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 import styles from './GameCards.module.scss';
+import '../../App.scss';
 
 import { ReactComponent as Check } from '../../Static/Icons/check.svg';
 import { ReactComponent as Refresh } from '../../Static/Icons/refresh.svg';
@@ -15,6 +18,7 @@ const GameCards = () => {
     );
     const [current, setCurrent] = React.useState({});
     const navigate = useNavigate();
+    const transition = React.createRef();
 
     React.useEffect(() => {
         const firstCard = cards.find((card) => card.status === '');
@@ -35,11 +39,25 @@ const GameCards = () => {
     }
 
     return (
-        <div className={styles.gameCards}>
+        <div className={styles.gameCards} ref={transition}>
             <Header hidePrev='true' />
             {cards && current && (
                 <>
-                    <img src={current.image} alt={current.title} />
+                    <TransitionGroup className='todo-list'>
+                        <CSSTransition
+                            key={current.image}
+                            timeout={300}
+                            classNames='tourImg'
+                        >
+                            <div className={styles.item}>
+                                <img
+                                    className={styles.image}
+                                    src={current.image}
+                                    alt={current.title}
+                                />
+                            </div>
+                        </CSSTransition>
+                    </TransitionGroup>
                     <div className={styles.howToMake}>
                         <h1 className={styles.title}>{current.title}</h1>
                         <h2>{current.description}</h2>

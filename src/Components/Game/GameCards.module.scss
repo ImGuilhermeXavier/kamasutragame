@@ -44,3 +44,13 @@
 .button:last-child {
   margin-left: 20px;
 }
+
+.image {
+  position: absolute;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

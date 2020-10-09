@@ -41,7 +41,7 @@ const TourStep = ({ number }) => {
         return `/tour/step-${step + 1}`;
     }
 
-    function finish(step) {
+    function finish() {
         localStorage.setItem('finishOnboarding', true);
         return '/home';
     }
