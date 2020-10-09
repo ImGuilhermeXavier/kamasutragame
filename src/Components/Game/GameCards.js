@@ -18,7 +18,6 @@ const GameCards = () => {
     );
     const [current, setCurrent] = React.useState({});
     const navigate = useNavigate();
-    const transition = React.createRef();
 
     React.useEffect(() => {
         const firstCard = cards.find((card) => card.status === '');
@@ -39,7 +38,7 @@ const GameCards = () => {
     }
 
     return (
-        <div className={styles.gameCards} ref={transition}>
+        <div className={styles.gameCards}>
             <Header hidePrev='true' />
             {cards && current && (
                 <>
