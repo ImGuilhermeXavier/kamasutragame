@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import position from './positions';
 
 export const UserContext = React.createContext();
 
@@ -49,7 +50,7 @@ export const UserStorage = ({ children }) => {
         if (arr.length >= cardNumber) {
             return arr;
         }
-        const newNumber = Math.floor(Math.random() * 38 + 1);
+        const newNumber = Math.floor(Math.random() * position.length);
         if (arr.indexOf(newNumber) < 0) {
             arr.push(newNumber);
         }

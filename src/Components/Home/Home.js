@@ -7,10 +7,15 @@ import joystick from '../../Static/Icons/joystick.svg';
 
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
+import Head from '../Head/Head';
 
 const Home = () => {
     return (
         <section className={`${styles.home} animeLeft`}>
+            <Head
+                title='Jogue o Kama Sutra Game e complete todas posições'
+                description='As melhores posições para casais no jogo Kama Sutra'
+            />
             <div className={styles.logo}>
                 <img src={logo} alt='Kama Sutra Logo' />
             </div>

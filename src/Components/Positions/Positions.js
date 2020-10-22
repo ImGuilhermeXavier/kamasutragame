@@ -6,6 +6,7 @@ import steps from '../../positions';
 
 import positions from '../../Static/Icons/positions.svg';
 import { Link, useParams } from 'react-router-dom';
+import Head from '../Head/Head';
 
 function scrollToElement(id) {
     const card = document.getElementById(`step-${id}`);
@@ -29,6 +30,10 @@ const Positions = () => {
 
     return (
         <section className='animeLeft'>
+            <Head
+                title='Posições'
+                description='As melhores posições para casais no jogo Kama Sutra'
+            />
             <Header
                 complete='true'
                 title='Posições'

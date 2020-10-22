@@ -3,10 +3,15 @@ import Header from '../Header';
 import statistic from '../../Static/Icons/statistic.svg';
 
 import styles from './Statistics.module.scss';
+import Head from '../Head/Head';
 
 const Statistics = () => {
     return (
         <section className={`animeLeft ${styles.statistics}`}>
+            <Head
+                title='Estatísticas'
+                description='Veja todas as Estatísticas'
+            />
             <Header
                 complete='true'
                 title='Estatísticas'

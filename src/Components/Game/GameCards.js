@@ -42,7 +42,7 @@ const GameCards = () => {
             <Header hidePrev='true' />
             {cards && current && (
                 <>
-                    <TransitionGroup className='todo-list'>
+                    <TransitionGroup>
                         <CSSTransition
                             key={current.image}
                             timeout={300}

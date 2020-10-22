@@ -5,9 +5,11 @@ import { ReactComponent as Cock } from '../../Static/Icons/cock.svg';
 
 import styles from './GameFinish.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../UserContext';
 
 const GameFinish = () => {
     const navigate = useNavigate();
+    const { cards } = React.useContext(UserContext);
 
     return (
         <section className={`animeLeft ${styles.finish}`}>
@@ -15,7 +17,7 @@ const GameFinish = () => {
             <Cock />
             <div className={styles.congratulation}>
                 <span className={styles.title}>Parabéns</span>
-                <span>Voce concluiu X posições</span>
+                <span>Voce concluiu {cards.length} posições</span>
             </div>
             <div className={styles.buttons}>
                 <button
