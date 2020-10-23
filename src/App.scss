@@ -33,6 +33,12 @@
 .tourImg-exit-active {
     animation: slideOut 0.3s forwards;
 }
+
+.todo-list {
+    height: 30%;
+    width: 100%;
+    position: relative;
+}
   
 @keyframes slideIn {
     to {
