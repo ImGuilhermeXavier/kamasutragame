@@ -29,8 +29,9 @@ const steps = [
     },
     {
         id: 4,
-        title: '14',
-        description: 'Voce pode pular se quiser',
+        title: 'O encaixe',
+        description:
+            'A mulher estica uma das pernas para a penetração do homem.',
         image: require('./Static/Positions/ks-position-14.svg'),
     },
     {

@@ -3,7 +3,7 @@ import { UserContext } from '../../UserContext';
 import steps from '../../positions';
 import Header from '../Header';
 
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { TransitionGroup } from 'react-transition-group';
 
 import styles from './GameCards.module.scss';
 import '../../App.scss';
@@ -11,13 +11,19 @@ import '../../App.scss';
 import { ReactComponent as Check } from '../../Static/Icons/check.svg';
 import { ReactComponent as Refresh } from '../../Static/Icons/refresh.svg';
 import { useNavigate } from 'react-router-dom';
+import EntryContainer from './EntryContainer';
 
 const GameCards = () => {
     const { cards, positionDone, positionRefreshed } = React.useContext(
         UserContext,
     );
     const [current, setCurrent] = React.useState({});
+    const imageRef = React.createRef();
     const navigate = useNavigate();
+
+    // React.useEffect(() => {
+    //     console.log(imageRef.current.offsetHeight);
+    // }, [imageRef]);
 
     React.useEffect(() => {
         const firstCard = cards.find((card) => card.status === '');
@@ -42,20 +48,17 @@ const GameCards = () => {
             <Header hidePrev='true' />
             {cards && current && (
                 <>
-                    <TransitionGroup className='todo-list'>
-                        <CSSTransition
-                            key={current.image}
-                            timeout={300}
-                            classNames='tourImg'
-                        >
+                    <TransitionGroup className='tour-list'>
+                        <EntryContainer key={current.image}>
                             <div className={styles.item}>
                                 <img
                                     className={styles.image}
+                                    ref={imageRef}
                                     src={current.image}
                                     alt={current.title}
                                 />
                             </div>
-                        </CSSTransition>
+                        </EntryContainer>
                     </TransitionGroup>
                     <div className={styles.howToMake}>
                         <h1 className={styles.title}>{current.title}</h1>

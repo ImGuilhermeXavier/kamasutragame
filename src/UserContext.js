@@ -33,7 +33,6 @@ export const UserStorage = ({ children }) => {
     function positionRefreshed(id) {
         const newCard = numberGenerator(1)[0];
         if (cards.filter((card) => card.number === newCard).length) {
-            console.log(newCard);
             return positionRefreshed(id);
         }
         const newCardsArray = cards.map((card) => {
