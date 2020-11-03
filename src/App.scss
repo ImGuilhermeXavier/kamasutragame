@@ -19,26 +19,14 @@
 .tourImg-enter {
     opacity: 0;
     transform: translateX(200px);
-}
-
-.tourImg-enter-active {
     animation: slideIn 0.3s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tourImg-exit {
-    opacity: 1;
-    transform: initial;
-}
-
-.tourImg-exit-active {
-    animation: slideOut 0.3s forwards;
-}
-
-.tour-list {
-    height: 35%;
-    width: 100%;
-    margin-bottom: 20px;
-    position: relative;
+    display: none;
 }
   
 @keyframes slideIn {
@@ -47,11 +35,3 @@
         transform: initial;
     }
 }
-
-@keyframes slideOut {
-    to {
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-}
-

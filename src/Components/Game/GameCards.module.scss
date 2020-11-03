@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .buttons {
@@ -48,8 +48,9 @@
 }
 
 .image {
-  top: 0;
-  position: absolute;
+  max-width: 330px;
+  max-height: 330px;
+  min-height: 150px;
 }
 
 .item {
