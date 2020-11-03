@@ -59,5 +59,12 @@
         "HTML (EEx)",
         "HTML (Eex)",
         "plist"
-    ]
+    ],
+    "files.exclude": {
+        "node_modules/": true,
+        "config/": true,
+        "scripts/": true,
+        "package-lock.json/": true,
+        "yarn.lock/": true,
+    }
 }
