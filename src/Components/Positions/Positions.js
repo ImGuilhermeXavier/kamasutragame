@@ -2,11 +2,11 @@ import React from 'react';
 import Header from '../Header';
 
 import styles from './Positions.module.scss';
-import steps from '../../positions';
 
 import positions from '../../Static/Icons/positions.svg';
 import { Link, useParams } from 'react-router-dom';
 import Head from '../Head/Head';
+import { UserContext } from '../../UserContext';
 
 function scrollToElement(id) {
     const card = document.getElementById(`step-${id}`);
@@ -20,7 +20,10 @@ function scrollToElement(id) {
 }
 
 const Positions = () => {
+    const { getAllPositions } = React.useContext(UserContext);
     const { id } = useParams();
+
+    const steps = getAllPositions();
 
     React.useEffect(() => {
         if (id) {

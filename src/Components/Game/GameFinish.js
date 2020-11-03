@@ -9,7 +9,11 @@ import { UserContext } from '../../UserContext';
 
 const GameFinish = () => {
     const navigate = useNavigate();
-    const { cards } = React.useContext(UserContext);
+    const { cards, savePositionsDone } = React.useContext(UserContext);
+
+    React.useEffect(() => {
+        savePositionsDone();
+    }, [savePositionsDone]);
 
     return (
         <section className={`animeLeft ${styles.finish}`}>

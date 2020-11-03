@@ -1,6 +1,5 @@
 import React from 'react';
 import { UserContext } from '../../UserContext';
-import steps from '../../positions';
 import Header from '../Header';
 
 import { TransitionGroup } from 'react-transition-group';
@@ -14,23 +13,26 @@ import { useNavigate } from 'react-router-dom';
 import EntryContainer from './EntryContainer';
 
 const GameCards = () => {
-    const { cards, positionDone, positionRefreshed } = React.useContext(
-        UserContext,
-    );
+    const {
+        cards,
+        positionDone,
+        positionRefreshed,
+        getAllPositions,
+    } = React.useContext(UserContext);
     const [current, setCurrent] = React.useState({});
     const imageRef = React.createRef();
     const navigate = useNavigate();
 
-    // React.useEffect(() => {
-    //     console.log(imageRef.current.offsetHeight);
-    // }, [imageRef]);
-
     React.useEffect(() => {
         const firstCard = cards.find((card) => card.status === '');
         if (cards && firstCard) {
-            setCurrent(steps.filter((step) => step.id === firstCard.number)[0]);
+            setCurrent(
+                getAllPositions().filter(
+                    (step) => step.id === firstCard.number,
+                )[0],
+            );
         }
-    }, [cards]);
+    }, [cards, getAllPositions]);
 
     function finishPosition(id, status) {
         positionDone(id, status);

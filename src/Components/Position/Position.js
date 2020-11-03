@@ -1,14 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import steps from '../../positions';
+import { UserContext } from '../../UserContext';
 import Header from '../Header';
 
 import styles from './Position.module.scss';
 
 const Position = () => {
     const { id } = useParams();
+    const { getAllPositions } = React.useContext(UserContext);
 
-    const [step] = steps.filter((step) => step.id === +id);
+    const [step] = getAllPositions().filter((step) => step.id === +id);
     return (
         <section className={styles.position}>
             <Header linkPrev={`/positions/${id}`} />

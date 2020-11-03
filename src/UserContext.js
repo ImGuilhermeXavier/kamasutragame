@@ -56,6 +56,29 @@ export const UserStorage = ({ children }) => {
         return numberGenerator(cardNumber, arr);
     }
 
+    function getAllPositions() {
+        if (localStorage.getItem('allPositions')) {
+            return JSON.parse(localStorage.getItem('allPositions'));
+        }
+    }
+
+    function savePositionsDone() {
+        const positionDoneIds = cards.map((card) => card && card.number);
+        console.log(positionDoneIds);
+        const getAllPositionsDone = getAllPositions().map((position) => {
+            if (positionDoneIds.includes(position.id)) {
+                position.done = true;
+            }
+
+            return position;
+        });
+
+        localStorage.setItem(
+            'allPositions',
+            JSON.stringify(getAllPositionsDone),
+        );
+    }
+
     React.useEffect(() => {
         const storedCurrentGame = JSON.parse(
             localStorage.getItem('currentGame'),
@@ -71,9 +94,26 @@ export const UserStorage = ({ children }) => {
         setCards(storedCurrentGame);
     }, [navigate]);
 
+    React.useEffect(() => {
+        const storedAllPositions = JSON.parse(
+            localStorage.getItem('allPositions'),
+        );
+
+        if (!storedAllPositions) {
+            localStorage.setItem('allPositions', JSON.stringify(position));
+        }
+    }, []);
+
     return (
         <UserContext.Provider
-            value={{ startGame, cards, positionDone, positionRefreshed }}
+            value={{
+                startGame,
+                cards,
+                positionDone,
+                positionRefreshed,
+                getAllPositions,
+                savePositionsDone,
+            }}
         >
             {children}
         </UserContext.Provider>
