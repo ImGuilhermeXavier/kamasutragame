@@ -22,6 +22,7 @@
   height: 9rem;
   transform: rotate(45deg);
   cursor: pointer;
+  position: relative;
 }
 
 .card:focus,
@@ -35,4 +36,23 @@
   max-width: 80%;
   max-height: 80%;
   transform: rotate(-45deg);
+}
+
+.done {
+  position: absolute;
+  border-radius: 50%;
+  top: 130px;
+  fill: $background-color;
+  transform: rotate(-45deg);
+  background-color: $green;
+  z-index: 5;
+  padding: 5px;
+  font-weight: bold;
+  border: solid 3px $background-color;
+  box-shadow: 2px 2px 4px 0 $black;
+}
+
+.doneRight {
+  top: 53px;
+  right: -18px;
 }

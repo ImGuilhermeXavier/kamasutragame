@@ -7,6 +7,7 @@ import positions from '../../Static/Icons/positions.svg';
 import { Link, useParams } from 'react-router-dom';
 import Head from '../Head/Head';
 import { UserContext } from '../../UserContext';
+import { ReactComponent as Check } from '../../Static/Icons/check.svg';
 
 function scrollToElement(id) {
     const card = document.getElementById(`step-${id}`);
@@ -55,6 +56,9 @@ const Positions = () => {
                                     id={`step-${step.id}`}
                                     className={styles.card}
                                 >
+                                    {step.done && (
+                                        <Check className={styles.done} />
+                                    )}
                                     <img
                                         className={styles.img}
                                         src={step.image}
@@ -75,6 +79,11 @@ const Positions = () => {
                                     id={`step-${step.id}`}
                                     className={styles.card}
                                 >
+                                    {step.done && (
+                                        <Check
+                                            className={`${styles.done} ${styles.doneRight}`}
+                                        />
+                                    )}
                                     <img
                                         className={styles.img}
                                         src={step.image}
