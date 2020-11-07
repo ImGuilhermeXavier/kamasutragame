@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.about {
+  margin: 3rem 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $white;
+  text-decoration: none;
+}
+
+.description {
+  margin: 1rem 0 4rem;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}

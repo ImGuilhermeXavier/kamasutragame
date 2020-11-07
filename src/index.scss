@@ -5,6 +5,10 @@
   src: url('./Static/Fonts/Lora-Regular.ttf') format('truetype'),
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $background-color;
   color: $white;

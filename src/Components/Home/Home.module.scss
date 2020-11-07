@@ -12,12 +12,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .nav {
   display: flex;
   width: 100%;
   margin: 0 1rem 1rem;
+}
+
+.info {
+  text-align: center;
+  color: $gray;
+  margin: 0 30px 30px;
+}
+
+.link {
+  color: $gray;
+  font-weight: bold;
 }
 
 .button {
