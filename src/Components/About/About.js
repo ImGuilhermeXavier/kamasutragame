@@ -5,13 +5,8 @@ import styles from './About.module.scss';
 const About = () => {
     return (
         <section className={styles.about}>
-            <a
-                href='true'
-                className={styles.title}
-                id='whats-is'
-                name='whats-is'
-            >
-                O que é o Kama Sutra?
+            <a href='.' className={styles.title} id='whats-is' name='whats-is'>
+                <h1>O que é o Kama Sutra?</h1>
             </a>
             <p className={styles.description}>
                 Muito mais do que um guia de posições sexuais, a obra é um
@@ -22,12 +17,12 @@ const About = () => {
                 obter sucesso.
             </p>
             <a
-                href='true'
+                href='.'
                 className={styles.title}
                 id='where-from'
                 name='where-from'
             >
-                Onde surgiu o Kama Sutra?
+                <h1>Onde surgiu o Kama Sutra?</h1>
             </a>
             <p className={styles.description}>
                 De origem Hindu foi um compilado feito por Mallanaga
@@ -37,12 +32,12 @@ const About = () => {
                 que ele não era casado e morreu preso em um convento.
             </p>
             <a
-                href='true'
+                href='.'
                 className={styles.title}
                 id='how-to-play'
                 name='how-to-play'
             >
-                Como jogar o Kama Sutra Game?
+                <h1>Como jogar o Kama Sutra Game?</h1>
             </a>
             <p className={styles.description}>
                 É um jogo para casais com posições sexuais de diferentes níveis
@@ -52,13 +47,15 @@ const About = () => {
                 cada uma.
             </p>
             <a
-                href='true'
+                href='.'
                 className={styles.title}
                 id='can-we-play'
                 name='can-we-play'
             >
-                Somos um casal iniciante e não temos muita prática, conseguimos
-                jogar?
+                <h1>
+                    Somos um casal iniciante e não temos muita prática,
+                    conseguimos jogar?
+                </h1>
             </a>
             <p className={styles.description}>
                 Com certeza! O jogo é feito para todos os casais iniciantes ou

@@ -15,18 +15,18 @@ const Home = () => {
         <>
             <section className={`${styles.home} animeLeft`}>
                 <Head
-                    title='Jogue o Kama Sutra Game e complete todas posições'
+                    title='Home'
                     description='As melhores posições para casais no jogo Kama Sutra'
                 />
                 <div className={styles.logo}>
                     <img src={logo} alt='Kama Sutra Logo' />
-                    <h3 className={styles.info}>
+                    <h1 className={styles.info}>
                         Jogue o{' '}
                         <a href='#whats-is' className={styles.link}>
                             Kama Sutra
                         </a>{' '}
                         com mais de 35 posições para Casais
-                    </h3>
+                    </h1>
                 </div>
 
                 <nav className={styles.nav}>
