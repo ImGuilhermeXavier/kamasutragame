@@ -64,7 +64,6 @@ export const UserStorage = ({ children }) => {
 
     function savePositionsDone() {
         const positionDoneIds = cards.map((card) => card && card.number);
-        console.log(positionDoneIds);
         const getAllPositionsDone = getAllPositions().map((position) => {
             if (positionDoneIds.includes(position.id)) {
                 position.done = true;

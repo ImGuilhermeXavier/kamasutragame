@@ -11,10 +11,7 @@ function Welcome() {
     const navigate = useNavigate();
 
     React.useEffect(() => {
-        if (localStorage.getItem('finishOnboarding')) {
-            console.log('caiu');
-            navigate('/home');
-        }
+        if (localStorage.getItem('finishOnboarding')) navigate('/home');
     }, [navigate]);
 
     return (
