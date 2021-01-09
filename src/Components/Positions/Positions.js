@@ -34,10 +34,7 @@ const Positions = () => {
 
     return (
         <section className='animeLeft'>
-            <Head
-                title='Posições'
-                description='As melhores posições para casais no jogo Kama Sutra'
-            />
+            <Head title='Posições' />
             <Header
                 complete='true'
                 title='Posições'

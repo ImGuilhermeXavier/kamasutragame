@@ -14,10 +14,7 @@ const Home = () => {
     return (
         <>
             <section className={`${styles.home} animeLeft`}>
-                <Head
-                    title='Home'
-                    description='As melhores posições para casais no jogo Kama Sutra'
-                />
+                <Head title='Home' />
                 <div className={styles.logo}>
                     <img src={logo} alt='Kama Sutra Logo' />
                     <h1 className={styles.info}>

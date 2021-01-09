@@ -19,10 +19,7 @@ const Statistics = () => {
 
     return (
         <section className={`animeLeft ${styles.statistics}`}>
-            <Head
-                title='Estatísticas'
-                description='Veja todas as Estatísticas'
-            />
+            <Head title='Estatísticas' />
             <Header
                 complete='true'
                 title='Estatísticas'

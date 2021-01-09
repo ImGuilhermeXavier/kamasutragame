@@ -16,10 +16,7 @@ function Welcome() {
 
     return (
         <>
-            <Head
-                title='Jogue o Kama Sutra Game e complete todas posições'
-                description='As melhores posições para casais no jogo Kama Sutra'
-            />
+            <Head title='Jogue o Kama Sutra Game e complete todas posições' />
             <div className={styles.App}>
                 <img className={styles.logo} src={logo} alt='Kama Sutra Logo' />
                 <h3 className={styles.info}>
