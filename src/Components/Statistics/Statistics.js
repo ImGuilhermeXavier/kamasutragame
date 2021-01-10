@@ -5,6 +5,7 @@ import { UserContext } from '../../UserContext';
 
 import styles from './Statistics.module.scss';
 import Head from '../Head/Head';
+import About from '../About/About';
 
 const Statistics = () => {
     const { getAllPositions } = React.useContext(UserContext);
@@ -18,29 +19,32 @@ const Statistics = () => {
     }
 
     return (
-        <section className={`animeLeft ${styles.statistics}`}>
-            <Head title='Estatísticas' />
-            <Header
-                complete='true'
-                title='Estatísticas'
-                linkPrev='/home'
-                image={statistic}
-            />
-            <div className={styles.cards}>
-                <div className={styles.card}>
-                    <div>Feitas</div>
-                    <div>{getDonePositions()}</div>
+        <>
+            <section className={`animeLeft ${styles.statistics}`}>
+                <Head title='Estatísticas' />
+                <Header
+                    complete='true'
+                    title='Estatísticas'
+                    linkPrev='/home'
+                    image={statistic}
+                />
+                <div className={styles.cards}>
+                    <div className={styles.card}>
+                        <div>Feitas</div>
+                        <div>{getDonePositions()}</div>
+                    </div>
+                    <div className={styles.card}>
+                        <div>Restantes</div>
+                        <div>{getRemainingPositions()}</div>
+                    </div>
+                    <div className={styles.card}>
+                        <div>Total</div>
+                        <div>{getAllPositions().length}</div>
+                    </div>
                 </div>
-                <div className={styles.card}>
-                    <div>Restantes</div>
-                    <div>{getRemainingPositions()}</div>
-                </div>
-                <div className={styles.card}>
-                    <div>Total</div>
-                    <div>{getAllPositions().length}</div>
-                </div>
-            </div>
-        </section>
+            </section>
+            <About />
+        </>
     );
 };
 

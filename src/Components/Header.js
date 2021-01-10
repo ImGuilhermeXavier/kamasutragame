@@ -26,7 +26,7 @@ const Header = ({
                     </Link>
                 )}
                 <Link to='/home'>
-                    <img src={smallLogo} alt='small Logo' />
+                    <img src={smallLogo} alt='Logo pequeno' />
                 </Link>
             </div>
             {complete && (

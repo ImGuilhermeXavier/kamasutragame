@@ -25,7 +25,7 @@ const GameChoseNumber = () => {
 
     function saveCardNumber() {
         startGame(cardNumber);
-        return navigate('cards');
+        return navigate('cartas');
     }
 
     return (
@@ -33,7 +33,7 @@ const GameChoseNumber = () => {
             <Header />
             <h1 className={styles.title}>Quantas posições?</h1>
             <div>
-                <img src={cardsImage} alt='Cards' />
+                <img src={cardsImage} alt='Cartas' />
             </div>
             <div className={styles.number}>{cardNumber}</div>
             <div className={styles.buttons}>

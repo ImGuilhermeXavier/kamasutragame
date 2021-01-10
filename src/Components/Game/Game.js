@@ -9,8 +9,8 @@ const Game = () => {
         <section className='animeLeft'>
             <Routes>
                 <Route path='/' element={<GameChoseNumber />} />
-                <Route path='cards' element={<GameCards />} />
-                <Route path='finish' element={<GameFinish />} />
+                <Route path='cartas' element={<GameCards />} />
+                <Route path='final' element={<GameFinish />} />
             </Routes>
         </section>
     );

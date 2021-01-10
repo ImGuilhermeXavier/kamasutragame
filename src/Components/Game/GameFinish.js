@@ -26,7 +26,7 @@ const GameFinish = () => {
             <div className={styles.buttons}>
                 <button
                     className={styles.button}
-                    onClick={() => navigate('/statistics')}
+                    onClick={() => navigate('/estatisticas')}
                 >
                     Estatística
                 </button>

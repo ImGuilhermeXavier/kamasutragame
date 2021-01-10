@@ -37,7 +37,7 @@ const Home = () => {
                         </div>
                         <span className={styles.name}>Posições</span>
                     </Link>
-                    <Link to='/game' className={styles.button}>
+                    <Link to='/jogo' className={styles.button}>
                         <div className={styles.img}>
                             <img
                                 src={joystick}
@@ -47,11 +47,11 @@ const Home = () => {
                         </div>
                         <span className={styles.name}>Jogar</span>
                     </Link>
-                    <Link to='/statistics' className={styles.button}>
+                    <Link to='/estatisticas' className={styles.button}>
                         <div className={styles.img}>
                             <img
                                 src={statistic}
-                                alt='Statistics'
+                                alt='Estatísticas'
                                 className={styles.iconEst}
                             />
                         </div>

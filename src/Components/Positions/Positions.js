@@ -8,6 +8,7 @@ import { Link, useParams } from 'react-router-dom';
 import Head from '../Head/Head';
 import { UserContext } from '../../UserContext';
 import { ReactComponent as Check } from '../../Static/Icons/check.svg';
+import About from '../About/About';
 
 function scrollToElement(id) {
     const card = document.getElementById(`step-${id}`);
@@ -33,66 +34,69 @@ const Positions = () => {
     }, [id]);
 
     return (
-        <section className='animeLeft'>
-            <Head title='Posições' />
-            <Header
-                complete='true'
-                title='Posições'
-                linkPrev='/home'
-                image={positions}
-                subtitle={`Total: ${steps.length}`}
-            />
-            <div className={styles.content}>
-                <ul className={styles.firstColumn}>
-                    {steps.map(
-                        (step) =>
-                            steps.indexOf(step) <= steps.length / 2 && (
-                                <Link
-                                    to={`/position/${step.id}`}
-                                    key={step.id}
-                                    id={`step-${step.id}`}
-                                    className={styles.card}
-                                >
-                                    {step.done && (
-                                        <Check className={styles.done} />
-                                    )}
-                                    <img
-                                        className={styles.img}
-                                        src={step.image}
-                                        loading='lazy'
-                                        alt={step.title}
-                                    />
-                                </Link>
-                            ),
-                    )}
-                </ul>
-                <ul className={styles.secondColumn}>
-                    {steps.map(
-                        (step) =>
-                            steps.indexOf(step) > steps.length / 2 && (
-                                <Link
-                                    to={`/position/${step.id}`}
-                                    key={step.id}
-                                    id={`step-${step.id}`}
-                                    className={styles.card}
-                                >
-                                    {step.done && (
-                                        <Check
-                                            className={`${styles.done} ${styles.doneRight}`}
+        <>
+            <section className='animeLeft'>
+                <Head title='Posições' />
+                <Header
+                    complete='true'
+                    title='Posições'
+                    linkPrev='/home'
+                    image={positions}
+                    subtitle={`Total: ${steps.length}`}
+                />
+                <div className={styles.content}>
+                    <ul className={styles.firstColumn}>
+                        {steps.map(
+                            (step) =>
+                                steps.indexOf(step) <= steps.length / 2 && (
+                                    <Link
+                                        to={`/position/${step.id}`}
+                                        key={step.id}
+                                        id={`step-${step.id}`}
+                                        className={styles.card}
+                                    >
+                                        {step.done && (
+                                            <Check className={styles.done} />
+                                        )}
+                                        <img
+                                            className={styles.img}
+                                            src={step.image}
+                                            loading='lazy'
+                                            alt={step.title}
                                         />
-                                    )}
-                                    <img
-                                        className={styles.img}
-                                        src={step.image}
-                                        loading='lazy'
-                                        alt={step.title}
-                                    />
-                                </Link>
-                            ),
-                    )}
-                </ul>
-            </div>
-        </section>
+                                    </Link>
+                                ),
+                        )}
+                    </ul>
+                    <ul className={styles.secondColumn}>
+                        {steps.map(
+                            (step) =>
+                                steps.indexOf(step) > steps.length / 2 && (
+                                    <Link
+                                        to={`/position/${step.id}`}
+                                        key={step.id}
+                                        id={`step-${step.id}`}
+                                        className={styles.card}
+                                    >
+                                        {step.done && (
+                                            <Check
+                                                className={`${styles.done} ${styles.doneRight}`}
+                                            />
+                                        )}
+                                        <img
+                                            className={styles.img}
+                                            src={step.image}
+                                            loading='lazy'
+                                            alt={step.title}
+                                        />
+                                    </Link>
+                                ),
+                        )}
+                    </ul>
+                </div>
+            </section>
+            <About />
+        </>
     );
 };
 

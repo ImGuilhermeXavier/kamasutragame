@@ -37,7 +37,7 @@ const GameCards = () => {
     function finishPosition(id, status) {
         positionDone(id, status);
         if (!cards.filter((card) => !card.status).length) {
-            navigate('/game/finish');
+            navigate('/jogo/final');
         }
     }
 

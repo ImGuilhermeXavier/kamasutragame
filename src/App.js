@@ -18,11 +18,11 @@ function App() {
                     <Route path='/' element={<Welcome />} />
                     <Route path='home' element={<Home />} />
                     <Route path='tour/*' element={<Tour />} />
-                    <Route path='game/*' element={<Game />} />
+                    <Route path='jogo/*' element={<Game />} />
                     <Route path='positions' element={<Positions />} />
                     <Route path='positions/:id' element={<Positions />} />
                     <Route path='position/:id' element={<Position />} />
-                    <Route path='statistics' element={<Statistics />} />
+                    <Route path='estatisticas' element={<Statistics />} />
                 </Routes>
             </UserStorage>
         </BrowserRouter>

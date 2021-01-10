@@ -14,7 +14,14 @@ const About = () => {
                 preceitos sagrados hindus. O Kamasutram (como é conhecido)
                 aborda diversos aspectos da vida cotidiana: como encontrar um
                 par ideal e se relacionar com outras pessoas, cuidar da casa e
-                obter sucesso.
+                obter sucesso.{' '}
+                <a
+                    target='blank'
+                    href='https://pt.wikipedia.org/wiki/Kama_Sutra'
+                    className={styles.link}
+                >
+                    Saiba mais sobre o Kama Sutra...
+                </a>
             </p>
             <h1 className={styles.title}>Onde surgiu o Kama Sutra?</h1>
             <p className={styles.description}>
